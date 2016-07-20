@@ -8,14 +8,14 @@ from selenium.webdriver.common.by import By;
 from selenium.webdriver.common.keys import Keys;
 
 
-print("Number of emails: ")
+print("Number of names: ")
 ammount = raw_input();
 
 # Email address generator
 
 print("Working...");
 
-service = service.Service('../chromedriver');
+service = service.Service('chromedriver/chromedriver');
 service.start()
 capabilities = {'chrome.binary': ''} # Enter path to chrome.exe in windows inside the '' tags.
 
@@ -51,7 +51,7 @@ x = driver.find_element_by_class_name("data").text;
 
 # Now the variable x is stored inside a file for the email generating program to use.
 
-file = open("emails.txt", "wb");
+file = open("names.txt", "wb");
 file.write(x);
 
 # Close opend file
